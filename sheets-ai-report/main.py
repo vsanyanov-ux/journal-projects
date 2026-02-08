@@ -63,8 +63,10 @@ Table data:
 
 Your task:
 - Briefly summarize what these entries are about.
-- Highlight the main themes, emotions, and topics.
+- Highlight the main themes, emotions and blind spots.
+- Give coaching advise.
 - Keep the answer under 200 words.
+- Answer in Russian
 """
 
     summary = call_mistral(analysis_prompt)
