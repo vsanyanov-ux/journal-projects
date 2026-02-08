@@ -37,7 +37,7 @@ mistral = Mistral(api_key=api_key)
 def call_mistral(prompt: str) -> str:
     try:
         res = mistral.chat.complete(
-            model="mistral-small-latest",
+            model="mistral-large-latest",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.2,
         )
