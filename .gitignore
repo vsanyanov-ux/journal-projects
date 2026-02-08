@@ -1,0 +1,13 @@
+# Секреты
+creds.json
+sheets-ai-report/creds.json
+*.env
+.env
+.env.local
+
+#Служебное
+__pycache__/
+*.pyc
+venv/
+.venv/
+
