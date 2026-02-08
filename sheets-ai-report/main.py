@@ -35,19 +35,18 @@ mistral = Mistral(api_key=api_key)
 
 
 def call_mistral(prompt: str) -> str:
-    res = mistral.chat.complete(
-        model="mistral-small-latest",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.2,
-    )
     try:
-        # запрос к Mistral
-        except Exception as e:
-            if "rate_limited" in str(e):
-                return {"error": "Превышен лимит запросов к AI. Попробуйте через 1-2 минуты."}
-            raise
-
-    return res.choices[0].message.content
+        res = mistral.chat.complete(
+            model="mistral-small-latest",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.2,
+        )
+        return res.choices[0].message.content
+    except Exception as e:
+        if "rate_limited" in str(e):
+            return "Превышен лимит запросов к AI. Попробуйте через 1-2 минуты."
+        raise
+    
 
 
 @app.post("/analyze")
