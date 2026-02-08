@@ -11,7 +11,7 @@ SHEET_ID = "1uLcaiGGW90b2xueGEYmyjol8jl3zVBuqpvZ9XMTrzTE"
 def get_sheet_summary():
     resp = requests.post(
         API_URL,
-        json={"sheet_id": SHEET_ID, "range": "A1:U5"},
+        json={"sheet_id": SHEET_ID, "range": "A1:U300"},
         timeout=60,
     )
     resp.raise_for_status()
