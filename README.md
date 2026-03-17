@@ -2,6 +2,20 @@
 
 Проект для управления записями пользователей и генерации AI-отчётов через Telegram-бота и FastAPI.
 
+## Архитектура системы
+
+```mermaid
+graph LR
+    User([Пользователь]) -- Telegram --> Bot[telegram-journal-bot]
+    Bot -- API Request --> FastAPI[sheets-ai-report]
+    FastAPI -- Read Data --> GS[(Google Sheets)]
+    FastAPI -- Analyze --> MAI[Mistral AI]
+    GS -- Data --> FastAPI
+    MAI -- Summary --> FastAPI
+    FastAPI -- Result --> Bot
+    Bot -- Response --> User
+```
+
 ## Структура проекта
 
 ```
