@@ -1,8 +1,22 @@
-venv/
+# Секреты
+creds.json
+sheets-ai-report/creds.json
+*.env
 .env
+.env.local
+
+#Служебное
 __pycache__/
 *.pyc
-.ipynb_checkpoints/
+venv/
+.venv/
+
+# IDE
 .vscode/
 .idea/
+
+# Логи
 *.log
+
+# Jupyter
+.ipynb_checkpoints/

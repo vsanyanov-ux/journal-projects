@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+langchain
+langchain-mistralai
+gspread
+google-auth
+python-dotenv
+pydantic
